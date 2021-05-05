@@ -12,7 +12,7 @@ class SamCdkLayerDemoStack(core.Stack):
         # Layer containing all the related third party imports
         test_layer_same_stack = lambda_.LayerVersion(
             self, 'layer-test-same-stack',
-            code=lambda_.Code.asset('lambda/layers/test_layer'),
+            code=lambda_.Code.asset('lambda/layers/test_layer/python.zip'),
             compatible_runtimes=[lambda_.Runtime.PYTHON_3_8],
             description='Test Layer'
         )
