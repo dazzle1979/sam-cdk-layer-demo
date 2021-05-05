@@ -1,9 +1,15 @@
-from aws_lambda_powertools import Logger
-
-logger = Logger()
+# Import from layer
+import yaml
 
 def handler(event, context):
-    logger.info("Logging with powertools from layer")
+    # Do something with PyYaml
+    document = """
+        a: 1
+        b:
+            c: 3
+            d: 4
+    """
+    print(yaml.load(document))
     return {
         'StatusCode': 200
     }

@@ -14,7 +14,7 @@ class LambdaStack(core.NestedStack):
         **kwargs) -> None:
         super().__init__(scope, construct_id, **kwargs)
 
-        # Lambda function: test local invoke
+        # Lambda function: test local invoke, using layer from other substack
         test_function = lambda_.Function(
             id='test-function',
             scope=self,
