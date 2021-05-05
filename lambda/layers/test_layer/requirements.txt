@@ -1,1 +1,1 @@
-aws-lambda-powertools==1.14.0
+pyyaml==5.4.1
